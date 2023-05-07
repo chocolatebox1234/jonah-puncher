@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Jonah Puncher</title>
+
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body style="background-image: url('images/bgBlue.jpg');
+  background-attachment: fixed;">
+<div class="sectionLeft">
+<center>
+<div class="scoreContainer unselectable">
+<span id="score">0</span> Punches<br>
+<span id="scorepersecond">0</span> Punches Per Second
+</div>
+<br>
+<div class="unselectable" id="clicker" onmousedown="bleep.play(), bleep2.play();"></div>
+</center>
+
+<script>
+var bleep = new Audio();
+bleep.src = "sounds/ouch.mp3";
+
+var bleep2 = new Audio();
+bleep2.src = "sounds/stoppunchingme.mp3";
+
+var bleep3 = new Audio();
+bleep3.src = "sounds/restart.mp3";
+
+var bleep4 = new Audio();
+bleep4.src = "sounds/purchase.mp3";
+
+var bleep5 = new Audio();
+bleep5.src = "sounds/upgrade.mp3";
+
+var bleep6 = new Audio();
+bleep6.src = "sounds/ara_ara.mp3";
+
+function resetGame() {
+bleep3.play();
+if (confirm("Are you sure you want to reset your game?")) {
+var gameSave = {};
+localStorage.setItem("gameSave", JSON.stringify(gameSave));
+location.reload();
+}
+}
+</script>
+
+<div class="sectionFooter" style="color: white";>
+<h2><span id="totalClicks">0</span> Total Clicks</h2>
+<h5><center>Jonah Puncher</center></h5>
+<div id="resetContainer"></div>
+<button id="resetContainer" onclick="resetGame();">Reset Game</button>
+</div>
+</div>
+
+<div class="sectionRight" style="overflow:auto">
+<div id="upgradeContainer"></div>
+<div id="shopContainer"></div>
+<div id="achievementContainer"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</HTML> 

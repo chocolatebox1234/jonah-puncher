@@ -1,0 +1,128 @@
+.sectionLeft {
+float: left;
+width: 80%;
+position: fixed;
+}
+
+.sectionRight {
+float: right;
+width: 20%;
+}
+
+.scoreContainer {
+background-color: rgb(0, 0, 0, 0.3);
+width: 50%;
+padding: 10px;
+border-radius: 10px;
+font-size: 36px;
+font-weight: bold;
+color: white;
+}
+
+/*.clickerContainer img {
+position: relative;
+transition: all .09s ease-in-out;
+}
+
+.clickerContainer img:hover { transform: scale(1.10); }
+.clickerContainer img:active {transform: scale(0.99); }*/
+
+#clicker {
+	background-image: url("./images/Jonah.png");
+	background-size: contain;
+	position: relative;
+	transition: all .09s ease-in-out;
+	height: 256px;
+	width: 256px;
+}
+
+#clicker:hover { transform: scale(1.10); }
+#clicker:active { transform: scale(0.99); }
+
+#clicker > .number {
+	z-index: 99;
+	font-size: 24px;
+	font-family: 'Trebuchet Ms', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: white;
+	position: absolute;
+}
+
+.shopButton {
+background-image: url('images/storeTile.jpg');
+background-size: contain;
+position: relative;
+transition: all .09s ease-in-out;
+border-radius: 10px;
+width: 90%;
+margin: 10px 20px 10px 20px;
+}
+
+.shopButton:hover { transform: scale(1.10); }
+.shopButton:active { transform: scale(0.99); }
+
+.shopButton #image {
+width: 25%;
+}
+
+.shopButton img {
+height: 64px;
+width:64px;
+}
+
+.shopButton #nameAndCost p {
+margin: 0px;
+width: 60%;
+color: white;
+}
+
+
+.shopButton #nameAndCost p:first-of-type {
+font-size: 20px;
+width: 100%
+}
+
+.shopButton #amount {
+font-size: 40px;
+color: #FFFFFF;
+font-family: roboto;
+width: 15%;
+}
+
+.unselectable {
+user-select: none;
+}
+
+.sectionFooter {
+margin-top: 20%;
+}
+
+#upgradeContainer img {
+height: 60px;
+width: 60px;
+transition: all .09s ease-in-out;
+}
+
+#upgradeContainer img:hover { transform: scale(1.10); }
+#upgradeContainer img:active { transform: scale(0.99); }
+
+#achievementContainer img {
+height: 60px;
+width: 60px;
+transition: all .99s ease-in-out;
+}
+
+#achievementContainer img:hover { transform: scale(1.10); }
+
+#resetContainer {
+transition: all .2s ease-in-out;
+font-size: 15px;
+font-family: roboto;
+width: 8%;
+background-image: url('file:///C:/Users/User/OneDrive/Documents/Clicker%20Game/images/storeTile.jpg');
+color: white;
+border-radius: 10px;
+margin: -40px 40px -40px 40px;
+}
+
+#resetContainer:hover { transform: scale(1.10); }
+#resetContainer:active { transform: scale(0.99); }
